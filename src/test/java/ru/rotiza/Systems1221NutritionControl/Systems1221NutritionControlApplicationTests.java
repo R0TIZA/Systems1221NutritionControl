@@ -1,4 +1,4 @@
-package ru.rotiza.systems1221nutritioncontrol;
+package ru.rotiza.Systems1221NutritionControl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

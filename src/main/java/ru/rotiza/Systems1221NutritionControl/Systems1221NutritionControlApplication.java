@@ -1,4 +1,4 @@
-package ru.rotiza.systems1221nutritioncontrol;
+package ru.rotiza.Systems1221NutritionControl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
