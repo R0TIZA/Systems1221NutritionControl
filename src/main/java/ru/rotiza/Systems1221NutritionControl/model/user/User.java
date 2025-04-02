@@ -12,7 +12,7 @@ import lombok.experimental.FieldDefaults;
 @Table(name = "'User'")
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserDAO {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "'Id'")
@@ -42,7 +42,7 @@ public class UserDAO {
     @Column(name = "'BMR'")
     Double bmr;
 
-    public UserDAO(NewUserRequestDAO user) {
+    public User(NewUserRequestDTO user) {
         this.name = user.getName();
         this.gender = user.getGender();
         this.email = user.getEmail();
@@ -52,7 +52,7 @@ public class UserDAO {
         this.goal = user.getGoal();
     }
 
-    public void updateUser(UpdateUserRequestDAO user) {
+    public void updateUser(UpdateUserRequestDTO user) {
         if(user.getName()!=null) {
             this.name = user.getName();
         }

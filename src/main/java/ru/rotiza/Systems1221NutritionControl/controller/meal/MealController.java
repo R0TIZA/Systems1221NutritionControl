@@ -7,8 +7,8 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
-import ru.rotiza.Systems1221NutritionControl.model.meal.MealDAO;
-import ru.rotiza.Systems1221NutritionControl.model.meal.NewMealRequestDAO;
+import ru.rotiza.Systems1221NutritionControl.model.meal.Meal;
+import ru.rotiza.Systems1221NutritionControl.model.meal.NewMealRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.repository.dish.DishRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.meal.MealRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.user.UserRepo;
@@ -39,12 +39,12 @@ public class MealController {
     }
 
     @GetMapping("{mealId}")
-    public MealDAO getMeal(@PathVariable Long mealId) {
+    public Meal getMeal(@PathVariable Long mealId) {
         return mealRepo.findById(mealId).orElseThrow(NotFoundException::new);
     }
 
     @PostMapping
-    public MealDAO addMeal( @PathVariable Long userId,@Valid @RequestBody NewMealRequestDAO meal) {
+    public Meal addMeal(@PathVariable Long userId, @Valid @RequestBody NewMealRequestDTO meal) {
         return mealService.addMeal(userId, meal);
     }
 

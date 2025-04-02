@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 @Entity
 @Table(name = "Dish")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class DishDAO {
+public class Dish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
@@ -32,7 +32,7 @@ public class DishDAO {
     @Column(name = "Carbohydrate")
     Double carbohydrate;
 
-    public DishDAO(NewDishRequestDAO newDish){
+    public Dish(NewDishRequestDTO newDish){
         this.name = newDish.getName();
         this.calories = newDish.getCalories();
         this.protein = newDish.getProtein();
@@ -40,7 +40,7 @@ public class DishDAO {
         this.carbohydrate = newDish.getCarbohydrate();
     }
 
-    public void updateDish(UpdateDishRequestDAO updateDish){
+    public void updateDish(UpdateDishRequestDTO updateDish){
         String name = updateDish.getName();
         Double calories = updateDish.getCalories();
         Double protein = updateDish.getProtein();

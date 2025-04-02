@@ -9,10 +9,10 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
-import ru.rotiza.Systems1221NutritionControl.model.user.NewUserRequestDAO;
-import ru.rotiza.Systems1221NutritionControl.model.user.UpdateUserRequestDAO;
+import ru.rotiza.Systems1221NutritionControl.model.user.NewUserRequestDTO;
+import ru.rotiza.Systems1221NutritionControl.model.user.UpdateUserRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.repository.user.UserRepo;
-import ru.rotiza.Systems1221NutritionControl.model.user.UserDAO;
+import ru.rotiza.Systems1221NutritionControl.model.user.User;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,24 +30,24 @@ public class UserController {
     }
 
     @GetMapping
-    public Iterable<UserDAO> getUsers() {
+    public Iterable<User> getUsers() {
         return userRepo.findAll();
     }
 
     @GetMapping("{id}")
-    public UserDAO getUser(@PathVariable long id) {
+    public User getUser(@PathVariable long id) {
         return userRepo.findById(id).orElseThrow(NotFoundException::new);
     }
 
     @PostMapping
-    public UserDAO createUser(@Valid @RequestBody NewUserRequestDAO user) {
-        UserDAO newUser = new UserDAO(user);
+    public User createUser(@Valid @RequestBody NewUserRequestDTO user) {
+        User newUser = new User(user);
         return userRepo.save(newUser);
     }
 
     @PutMapping("{id}")
-    public UserDAO updateUser(@PathVariable Long id, @RequestBody UpdateUserRequestDAO user) {
-        UserDAO userToUpdate = userRepo.findById(id).orElseThrow(NotFoundException::new);
+    public User updateUser(@PathVariable Long id, @RequestBody UpdateUserRequestDTO user) {
+        User userToUpdate = userRepo.findById(id).orElseThrow(NotFoundException::new);
         userToUpdate.updateUser(user);
         return userRepo.save(userToUpdate);
     }

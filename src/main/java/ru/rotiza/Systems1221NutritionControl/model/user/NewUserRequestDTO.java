@@ -7,7 +7,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class NewUserRequestDAO {
+public class NewUserRequestDTO {
 
     @NotBlank
     @NotNull

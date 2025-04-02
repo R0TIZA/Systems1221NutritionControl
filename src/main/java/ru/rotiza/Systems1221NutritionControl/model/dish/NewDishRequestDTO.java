@@ -9,7 +9,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class NewDishRequestDAO {
+public class NewDishRequestDTO {
     @NotNull
     @NotBlank
     @Size(min = 1, max = 255)

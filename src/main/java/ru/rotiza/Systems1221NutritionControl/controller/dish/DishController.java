@@ -7,9 +7,9 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
-import ru.rotiza.Systems1221NutritionControl.model.dish.DishDAO;
-import ru.rotiza.Systems1221NutritionControl.model.dish.NewDishRequestDAO;
-import ru.rotiza.Systems1221NutritionControl.model.dish.UpdateDishRequestDAO;
+import ru.rotiza.Systems1221NutritionControl.model.dish.Dish;
+import ru.rotiza.Systems1221NutritionControl.model.dish.NewDishRequestDTO;
+import ru.rotiza.Systems1221NutritionControl.model.dish.UpdateDishRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.repository.dish.DishRepo;
 
 import java.util.HashMap;
@@ -27,19 +27,19 @@ public class DishController {
     }
 
     @GetMapping("{id}")
-    public DishDAO getDish(@PathVariable Long id) {
+    public Dish getDish(@PathVariable Long id) {
         return dishRepo.findById(id).orElseThrow(NotFoundException::new);
     }
 
     @PostMapping
-    public DishDAO createDish(@Valid @RequestBody NewDishRequestDAO requestDishDAO) {
-        DishDAO newDish = new DishDAO(requestDishDAO);
+    public Dish createDish(@Valid @RequestBody NewDishRequestDTO requestDishDAO) {
+        Dish newDish = new Dish(requestDishDAO);
         return dishRepo.save(newDish);
     }
 
     @PutMapping("{id}")
-    public DishDAO updateDish(@Valid @RequestBody UpdateDishRequestDAO requestDishDAO, @PathVariable Long id) {
-        DishDAO dishToUpdate = dishRepo.findById(id).orElseThrow(NotFoundException::new);
+    public Dish updateDish(@Valid @RequestBody UpdateDishRequestDTO requestDishDAO, @PathVariable Long id) {
+        Dish dishToUpdate = dishRepo.findById(id).orElseThrow(NotFoundException::new);
         dishToUpdate.updateDish(requestDishDAO);
         return dishRepo.save(dishToUpdate);
     }

@@ -7,7 +7,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UpdateUserRequestDAO {
+public class UpdateUserRequestDTO {
 
     @Size(min = 2, max = 255)
     String name;

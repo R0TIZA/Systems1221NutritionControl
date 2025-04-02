@@ -3,8 +3,8 @@ package ru.rotiza.Systems1221NutritionControl.model.meal;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import ru.rotiza.Systems1221NutritionControl.model.dish.DishDAO;
-import ru.rotiza.Systems1221NutritionControl.model.user.UserDAO;
+import ru.rotiza.Systems1221NutritionControl.model.dish.Dish;
+import ru.rotiza.Systems1221NutritionControl.model.user.User;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,18 +15,18 @@ import java.util.List;
 @Entity
 @Table(name = "Meal")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class MealDAO {
+public class Meal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(updatable = false, nullable = false, name = "Id")
     Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    UserDAO user;
+    User user;
 
     @OneToMany
     @Column(name = "Dishes")
-    List<DishDAO> dishes;
+    List<Dish> dishes;
 
 
     @Column(name = "Created")
@@ -35,7 +35,7 @@ public class MealDAO {
     @Column(name = "Calories")
     Double calories;
 
-    public MealDAO() {
+    public Meal() {
         this.calories = 0.0;
     }
 

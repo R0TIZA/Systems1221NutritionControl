@@ -5,10 +5,10 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
-import ru.rotiza.Systems1221NutritionControl.model.dish.DishDAO;
-import ru.rotiza.Systems1221NutritionControl.model.meal.MealDAO;
-import ru.rotiza.Systems1221NutritionControl.model.meal.NewMealRequestDAO;
-import ru.rotiza.Systems1221NutritionControl.model.user.UserDAO;
+import ru.rotiza.Systems1221NutritionControl.model.dish.Dish;
+import ru.rotiza.Systems1221NutritionControl.model.meal.Meal;
+import ru.rotiza.Systems1221NutritionControl.model.meal.NewMealRequestDTO;
+import ru.rotiza.Systems1221NutritionControl.model.user.User;
 import ru.rotiza.Systems1221NutritionControl.repository.dish.DishRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.meal.MealRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.user.UserRepo;
@@ -30,14 +30,14 @@ public class MealService {
         this.mealRepo = mealRepo;
     }
 
-    public MealDAO addMeal(Long userId, NewMealRequestDAO newMealRequest) {
-        UserDAO currentUser = userRepo.findById(userId).orElseThrow(NotFoundException::new);
-        MealDAO newMeal = new MealDAO();
+    public Meal addMeal(Long userId, NewMealRequestDTO newMealRequest) {
+        User currentUser = userRepo.findById(userId).orElseThrow(NotFoundException::new);
+        Meal newMeal = new Meal();
 
         newMeal.setUser(currentUser);
         newMeal.setDishes(new ArrayList<>(){{
             newMealRequest.getDishesId().forEach(id -> {
-                DishDAO dishFromDB = dishRepo.findById(id).orElseThrow(NotFoundException::new);
+                Dish dishFromDB = dishRepo.findById(id).orElseThrow(NotFoundException::new);
                 add(dishFromDB);
             });
         }});
