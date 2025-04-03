@@ -9,37 +9,38 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "'User'")
+@ToString
+@Table(name = "Users")
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "'Id'")
+    @Column(name = "Id")
     Long id;
 
-    @Column(name = "'Name'")
+    @Column(name = "Name")
     String name;
 
     @Enumerated(EnumType.STRING)
     Gender gender;
 
-    @Column(name = "'E-mail'")
+    @Column(name = "E-mail")
     String email;
 
-    @Column(name = "'Age'")
+    @Column(name = "Age")
     Integer age;
 
-    @Column(name = "'Weight'")
+    @Column(name = "Weight")
     Integer weight;
 
-    @Column(name = "'Height'")
+    @Column(name = "Height")
     Integer height;
 
     @Enumerated(EnumType.STRING)
     Goal goal;
 
-    @Column(name = "'BMR'")
+    @Column(name = "BMR")
     Double bmr;
 
     public User(NewUserRequestDTO user) {

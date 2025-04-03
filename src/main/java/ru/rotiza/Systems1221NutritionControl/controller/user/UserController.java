@@ -46,7 +46,7 @@ public class UserController {
     }
 
     @PutMapping("{id}")
-    public User updateUser(@PathVariable Long id, @RequestBody UpdateUserRequestDTO user) {
+    public User updateUser(@PathVariable Long id,@Valid @RequestBody UpdateUserRequestDTO user) {
         User userToUpdate = userRepo.findById(id).orElseThrow(NotFoundException::new);
         userToUpdate.updateUser(user);
         return userRepo.save(userToUpdate);

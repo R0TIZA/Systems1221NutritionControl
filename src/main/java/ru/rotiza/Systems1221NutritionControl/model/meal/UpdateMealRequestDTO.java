@@ -1,6 +1,8 @@
 package ru.rotiza.Systems1221NutritionControl.model.meal;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +15,9 @@ import java.util.List;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UpdateMealRequestDTO {
-    @NotNull
+    @Min(1)
+    Long userId;
+
+    @Size(min = 1)
     List<Dish> dishes;
 }

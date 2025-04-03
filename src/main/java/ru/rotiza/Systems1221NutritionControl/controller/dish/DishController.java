@@ -46,7 +46,7 @@ public class DishController {
 
     @DeleteMapping("{id}")
     public void deleteDish(@PathVariable Long id) {
-        dishRepo.deleteById(id);
+        dishRepo.delete(dishRepo.findById(id).orElseThrow(NotFoundException::new));
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

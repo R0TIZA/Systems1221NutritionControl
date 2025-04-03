@@ -11,7 +11,9 @@ import java.util.List;
 
 @Setter
 @Getter
+@Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Meal")
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -24,7 +26,7 @@ public class Meal {
     @ManyToOne(fetch = FetchType.LAZY)
     User user;
 
-    @OneToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @Column(name = "Dishes")
     List<Dish> dishes;
 
@@ -34,10 +36,6 @@ public class Meal {
 
     @Column(name = "Calories")
     Double calories;
-
-    public Meal() {
-        this.calories = 0.0;
-    }
 
     @PrePersist
     protected void onCreate() {

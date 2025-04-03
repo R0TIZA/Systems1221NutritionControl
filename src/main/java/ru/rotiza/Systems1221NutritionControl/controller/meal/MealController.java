@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
 import ru.rotiza.Systems1221NutritionControl.model.meal.Meal;
 import ru.rotiza.Systems1221NutritionControl.model.meal.NewMealRequestDTO;
+import ru.rotiza.Systems1221NutritionControl.model.meal.UpdateMealRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.repository.dish.DishRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.meal.MealRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.user.UserRepo;
@@ -18,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/meal/{userId}")
+@RequestMapping("/api/v1/meal")
 public class MealController {
 
     MealRepo mealRepo;
@@ -40,12 +41,22 @@ public class MealController {
 
     @GetMapping("{mealId}")
     public Meal getMeal(@PathVariable Long mealId) {
-        return mealRepo.findById(mealId).orElseThrow(NotFoundException::new);
+        return mealService.getMeal(mealId);
     }
 
     @PostMapping
-    public Meal addMeal(@PathVariable Long userId, @Valid @RequestBody NewMealRequestDTO meal) {
-        return mealService.addMeal(userId, meal);
+    public Meal addMeal(@Valid @RequestBody NewMealRequestDTO meal) {
+        return mealService.addMeal(meal);
+    }
+
+    @PutMapping("{mealId}")
+    public Meal updateMeal(@Valid @RequestBody UpdateMealRequestDTO meal, @PathVariable Long mealId) {
+        return mealService.updateMeal(meal, mealId);
+    }
+
+    @DeleteMapping("{mealId}")
+    public void deleteMeal(@PathVariable Long mealId) {
+        mealService.deleteMeal(mealId);
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
