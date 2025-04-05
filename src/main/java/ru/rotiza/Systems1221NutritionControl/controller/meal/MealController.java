@@ -42,7 +42,7 @@ public class MealController {
     }
 
     @GetMapping("{mealId}")
-    public ResponseEntity<?> getMeal(@PathVariable Long mealId) {
+    public ResponseEntity<?> handleGetMeal(@PathVariable Long mealId) {
         Meal response;
         try{
             response = mealService.getMeal(mealId);
@@ -55,13 +55,15 @@ public class MealController {
     }
 
     @PostMapping
-    public ResponseEntity<?> addMeal(@Valid @RequestBody NewMealRequestDTO meal) {
-        Meal response = mealService.createMeal(meal);
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    public ResponseEntity<?> handleAddNewMeal(@Valid @RequestBody NewMealRequestDTO meal) {
+        Meal response = mealService.addMeal(meal);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(response);
     }
 
     @PutMapping("{mealId}")
-    public ResponseEntity<?> updateMeal(@Valid @RequestBody UpdateMealRequestDTO meal, @PathVariable Long mealId) {
+    public ResponseEntity<?> handleUpdateMeal(@Valid @RequestBody UpdateMealRequestDTO meal, @PathVariable Long mealId) {
         Meal response;
         try{
             response = mealService.updateMeal(meal, mealId);
@@ -74,7 +76,7 @@ public class MealController {
     }
 
     @DeleteMapping("{mealId}")
-    public ResponseEntity<?> deleteMeal(@PathVariable Long mealId) {
+    public ResponseEntity<?> handleDeleteMeal(@PathVariable Long mealId) {
         try {
             mealService.deleteMeal(mealId);
         }catch (NotFoundException e){

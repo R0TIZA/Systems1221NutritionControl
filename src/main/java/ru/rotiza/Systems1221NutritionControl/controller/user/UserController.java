@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -32,14 +33,14 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getUsers() {
+    public ResponseEntity<?> handleGetAllUsers() {
         List<User> response = userService.getAllUsers();
         return ResponseEntity.status(HttpStatus.OK)
                 .body(response);
     }
 
     @GetMapping("{userId}")
-    public ResponseEntity<?> getUser(@PathVariable long userId) {
+    public ResponseEntity<?> handleGetUser(@PathVariable long userId) {
         User response;
         try{
             response = userService.getUser(userId);
@@ -52,14 +53,15 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createUser(@Valid @RequestBody NewUserRequestDTO user) {
+    public ResponseEntity<?> handleAddNewUser(@Valid @RequestBody NewUserRequestDTO user) {
         User response = userService.addUser(user);
         return ResponseEntity.status(HttpStatus.CREATED)
+                .contentType(MediaType.APPLICATION_JSON)
                 .body(response);
     }
 
     @PutMapping("{userId}")
-    public ResponseEntity<?> updateUser(@PathVariable Long userId,@Valid @RequestBody UpdateUserRequestDTO user) {
+    public ResponseEntity<?> handleUpdateUser(@PathVariable Long userId,@Valid @RequestBody UpdateUserRequestDTO user) {
         User response;
         try{
             response = userService.updateUser(user, userId);
@@ -72,7 +74,7 @@ public class UserController {
     }
 
     @DeleteMapping("{userId}")
-    public ResponseEntity<?> deleteUser(@PathVariable Long userId) {
+    public ResponseEntity<?> handleDeleteUser(@PathVariable Long userId) {
         try {
             userService.deleteUser(userId);
         }catch (NotFoundException e) {

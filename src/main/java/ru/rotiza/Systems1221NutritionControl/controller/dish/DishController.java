@@ -32,7 +32,7 @@ public class DishController {
     }
 
     @GetMapping("{dishId}")
-    public ResponseEntity<?> getDish(@PathVariable Long dishId) {
+    public ResponseEntity<?> handleGetDish(@PathVariable Long dishId) {
         Dish response;
         try{
             response = dishService.getDish(dishId);
@@ -45,14 +45,15 @@ public class DishController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createDish(@Valid @RequestBody NewDishRequestDTO newDishRequest) {
+    public ResponseEntity<?> handleAddNewDish(@Valid @RequestBody NewDishRequestDTO newDishRequest) {
         Dish response = dishService.addDish(newDishRequest);
         return ResponseEntity.status(HttpStatus.CREATED)
+                .contentType(MediaType.APPLICATION_JSON)
                 .body(response);
     }
 
     @PutMapping("{dishId}")
-    public ResponseEntity<?> updateDish(@Valid @RequestBody UpdateDishRequestDTO requestDishDAO, @PathVariable Long dishId) {
+    public ResponseEntity<?> handleUpdateDish(@Valid @RequestBody UpdateDishRequestDTO requestDishDAO, @PathVariable Long dishId) {
         Dish response;
         try{
             response = dishService.updateDish(requestDishDAO, dishId);
@@ -65,7 +66,7 @@ public class DishController {
     }
 
     @DeleteMapping("{dishId}")
-    public ResponseEntity<?> deleteDish(@PathVariable Long dishId) {
+    public ResponseEntity<?> handleDeleteDish(@PathVariable Long dishId) {
         try {
             dishService.deleteDish(dishId);
         }catch (NotFoundException e){

@@ -30,14 +30,22 @@ public class UserService {
     }
 
     public User addUser(NewUserRequestDTO newUserRequest) {
+        String name = newUserRequest.getName();
+        String email = newUserRequest.getEmail();
+        Gender gender = newUserRequest.getGender();
+        Integer age = newUserRequest.getAge();
+        Integer weight = newUserRequest.getWeight();
+        Integer height = newUserRequest.getHeight();
+        Goal goal = newUserRequest.getGoal();
+
         User newUser = User.builder()
-                .name(newUserRequest.getName())
-                .email(newUserRequest.getEmail())
-                .gender(newUserRequest.getGender())
-                .age(newUserRequest.getAge())
-                .weight(newUserRequest.getWeight())
-                .height(newUserRequest.getHeight())
-                .goal(newUserRequest.getGoal())
+                .name(name)
+                .email(email)
+                .gender(gender)
+                .age(age)
+                .weight(weight)
+                .height(height)
+                .goal(goal)
                 .build();
         return userRepo.save(newUser);
     }

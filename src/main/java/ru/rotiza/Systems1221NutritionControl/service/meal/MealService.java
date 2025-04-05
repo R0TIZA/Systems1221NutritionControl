@@ -40,7 +40,7 @@ public class MealService {
         return meal;
     }
 
-    public Meal createMeal(NewMealRequestDTO newMealRequest) {
+    public Meal addMeal(NewMealRequestDTO newMealRequest) {
         Long userId = newMealRequest.getUserId();
         User currentUser = userRepo.findById(userId).orElseThrow(NotFoundException::new);
         Meal newMeal = Meal.builder()
