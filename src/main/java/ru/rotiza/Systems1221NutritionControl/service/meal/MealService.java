@@ -1,8 +1,7 @@
-package ru.rotiza.Systems1221NutritionControl.service;
+package ru.rotiza.Systems1221NutritionControl.service.meal;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
@@ -34,17 +33,18 @@ public class MealService {
     }
 
     public Meal getMeal(Long id) {
-        Meal meal = mealRepo.findById(id).orElseThrow(NotFoundException::new);
-        Hibernate.initialize(meal);
+        Meal meal = mealRepo.findByIdAndFetchAll(id);
+        if (meal == null) {
+            throw new NotFoundException();
+        }
         return meal;
     }
 
-    public Meal addMeal(NewMealRequestDTO newMealRequest) {
+    public Meal createMeal(NewMealRequestDTO newMealRequest) {
         Long userId = newMealRequest.getUserId();
         User currentUser = userRepo.findById(userId).orElseThrow(NotFoundException::new);
         Meal newMeal = Meal.builder()
                 .user(currentUser)
-                .calories(0.0)
                 .dishes(new ArrayList<>(){{
                     newMealRequest.getDishesId().forEach(id -> {
                         Dish dishFromDB = dishRepo.findById(id).orElseThrow(NotFoundException::new);
@@ -62,10 +62,10 @@ public class MealService {
             User user = userRepo.findById(meal.getUserId()).orElseThrow(NotFoundException::new);
             mealFromDB.setUser(user);
         }
-        if (meal.getDishes() != null) {
+        if (meal.getDishesId() != null) {
             List<Dish> dishes = new ArrayList<>(){{
-                meal.getDishes().forEach(dish -> {
-                    Dish dishFromDB = dishRepo.findById(dish.getId()).orElseThrow(NotFoundException::new);
+                meal.getDishesId().forEach(dishId -> {
+                    Dish dishFromDB = dishRepo.findById(dishId).orElseThrow(NotFoundException::new);
                     add(dishFromDB);
                 });
             }};
@@ -75,6 +75,6 @@ public class MealService {
     }
 
     public void deleteMeal(Long mealId) {
-        mealRepo.deleteById(mealId);
+        mealRepo.delete(mealRepo.findById(mealId).orElseThrow(NotFoundException::new));
     }
 }

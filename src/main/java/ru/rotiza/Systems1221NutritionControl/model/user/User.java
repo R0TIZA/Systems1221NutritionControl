@@ -43,43 +43,6 @@ public class User {
     @Column(name = "BMR")
     Double bmr;
 
-    public User(NewUserRequestDTO user) {
-        this.name = user.getName();
-        this.gender = user.getGender();
-        this.email = user.getEmail();
-        this.age = user.getAge();
-        this.weight = user.getWeight();
-        this.height = user.getHeight();
-        this.goal = user.getGoal();
-    }
-
-    public void updateUser(UpdateUserRequestDTO user) {
-        if(user.getName()!=null) {
-            this.name = user.getName();
-        }
-        if(user.getGender()!=null) {
-            this.gender = user.getGender();
-        }
-        if(user.getEmail()!=null) {
-            this.email = user.getEmail();
-        }
-        if(user.getAge()!=null) {
-            this.age = user.getAge();
-        }
-        if(user.getEmail()!=null) {
-            this.email = user.getEmail();
-        }
-        if(user.getWeight()!=null) {
-            this.weight = user.getWeight();
-        }
-        if(user.getHeight()!=null) {
-            this.height = user.getHeight();
-        }
-        if(user.getGoal()!=null) {
-            this.goal = user.getGoal();
-        }
-    }
-
     @PreUpdate
     @PrePersist
     public void calculateBrm() {

@@ -1,8 +1,12 @@
 package ru.rotiza.Systems1221NutritionControl.controller.dish;
 
 import jakarta.validation.Valid;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -10,43 +14,66 @@ import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
 import ru.rotiza.Systems1221NutritionControl.model.dish.Dish;
 import ru.rotiza.Systems1221NutritionControl.model.dish.NewDishRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.model.dish.UpdateDishRequestDTO;
-import ru.rotiza.Systems1221NutritionControl.repository.dish.DishRepo;
+import ru.rotiza.Systems1221NutritionControl.service.dish.DishService;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/dish")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class DishController {
 
-    DishRepo dishRepo;
+    final DishService dishService;
 
     @Autowired
-    public DishController(DishRepo dishRepo) {
-        this.dishRepo = dishRepo;
+    public DishController(DishService dishService) {
+        this.dishService = dishService;
     }
 
-    @GetMapping("{id}")
-    public Dish getDish(@PathVariable Long id) {
-        return dishRepo.findById(id).orElseThrow(NotFoundException::new);
+    @GetMapping("{dishId}")
+    public ResponseEntity<?> getDish(@PathVariable Long dishId) {
+        Dish response;
+        try{
+            response = dishService.getDish(dishId);
+        }catch (NotFoundException e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(response);
     }
 
     @PostMapping
-    public Dish createDish(@Valid @RequestBody NewDishRequestDTO requestDishDAO) {
-        Dish newDish = new Dish(requestDishDAO);
-        return dishRepo.save(newDish);
+    public ResponseEntity<?> createDish(@Valid @RequestBody NewDishRequestDTO newDishRequest) {
+        Dish response = dishService.addDish(newDishRequest);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(response);
     }
 
-    @PutMapping("{id}")
-    public Dish updateDish(@Valid @RequestBody UpdateDishRequestDTO requestDishDAO, @PathVariable Long id) {
-        Dish dishToUpdate = dishRepo.findById(id).orElseThrow(NotFoundException::new);
-        dishToUpdate.updateDish(requestDishDAO);
-        return dishRepo.save(dishToUpdate);
+    @PutMapping("{dishId}")
+    public ResponseEntity<?> updateDish(@Valid @RequestBody UpdateDishRequestDTO requestDishDAO, @PathVariable Long dishId) {
+        Dish response;
+        try{
+            response = dishService.updateDish(requestDishDAO, dishId);
+        }catch (NotFoundException e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(response);
     }
 
-    @DeleteMapping("{id}")
-    public void deleteDish(@PathVariable Long id) {
-        dishRepo.delete(dishRepo.findById(id).orElseThrow(NotFoundException::new));
+    @DeleteMapping("{dishId}")
+    public ResponseEntity<?> deleteDish(@PathVariable Long dishId) {
+        try {
+            dishService.deleteDish(dishId);
+        }catch (NotFoundException e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .build();
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

@@ -5,16 +5,18 @@ import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import ru.rotiza.Systems1221NutritionControl.exception.NotFoundException;
 import ru.rotiza.Systems1221NutritionControl.model.user.NewUserRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.model.user.UpdateUserRequestDTO;
-import ru.rotiza.Systems1221NutritionControl.repository.user.UserRepo;
 import ru.rotiza.Systems1221NutritionControl.model.user.User;
+import ru.rotiza.Systems1221NutritionControl.service.user.UserService;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -22,39 +24,62 @@ import java.util.Map;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserController {
 
-    UserRepo userRepo;
+    UserService userService;
 
     @Autowired
-    public UserController(UserRepo userRepo) {
-        this.userRepo = userRepo;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping
-    public Iterable<User> getUsers() {
-        return userRepo.findAll();
+    public ResponseEntity<?> getUsers() {
+        List<User> response = userService.getAllUsers();
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(response);
     }
 
-    @GetMapping("{id}")
-    public User getUser(@PathVariable long id) {
-        return userRepo.findById(id).orElseThrow(NotFoundException::new);
+    @GetMapping("{userId}")
+    public ResponseEntity<?> getUser(@PathVariable long userId) {
+        User response;
+        try{
+            response = userService.getUser(userId);
+        }catch (NotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(response);
     }
 
     @PostMapping
-    public User createUser(@Valid @RequestBody NewUserRequestDTO user) {
-        User newUser = new User(user);
-        return userRepo.save(newUser);
+    public ResponseEntity<?> createUser(@Valid @RequestBody NewUserRequestDTO user) {
+        User response = userService.addUser(user);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(response);
     }
 
-    @PutMapping("{id}")
-    public User updateUser(@PathVariable Long id,@Valid @RequestBody UpdateUserRequestDTO user) {
-        User userToUpdate = userRepo.findById(id).orElseThrow(NotFoundException::new);
-        userToUpdate.updateUser(user);
-        return userRepo.save(userToUpdate);
+    @PutMapping("{userId}")
+    public ResponseEntity<?> updateUser(@PathVariable Long userId,@Valid @RequestBody UpdateUserRequestDTO user) {
+        User response;
+        try{
+            response = userService.updateUser(user, userId);
+        }catch (NotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(response);
     }
 
-    @DeleteMapping("{id}")
-    public void deleteUser(@PathVariable Long id) {
-        userRepo.delete(userRepo.findById(id).orElseThrow(NotFoundException::new));
+    @DeleteMapping("{userId}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long userId) {
+        try {
+            userService.deleteUser(userId);
+        }catch (NotFoundException e) {
+            ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .build();
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

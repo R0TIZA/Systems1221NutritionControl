@@ -1,5 +1,7 @@
 package ru.rotiza.Systems1221NutritionControl.model.meal;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -16,6 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "Meal")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Meal {
     @Id
@@ -40,6 +43,7 @@ public class Meal {
     @PrePersist
     protected void onCreate() {
         this.created = LocalDateTime.now();
+        calories = 0.0;
         dishes.forEach(dish -> {
             calories +=  dish.getCalories();
         });
@@ -47,6 +51,7 @@ public class Meal {
 
     @PreUpdate
     protected void onUpdate() {
+        calories = 0.0;
         dishes.forEach(dish -> {
             calories +=  dish.getCalories();
         });

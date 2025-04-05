@@ -3,6 +3,8 @@ package ru.rotiza.Systems1221NutritionControl.controller.meal;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +15,7 @@ import ru.rotiza.Systems1221NutritionControl.model.meal.UpdateMealRequestDTO;
 import ru.rotiza.Systems1221NutritionControl.repository.dish.DishRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.meal.MealRepo;
 import ru.rotiza.Systems1221NutritionControl.repository.user.UserRepo;
-import ru.rotiza.Systems1221NutritionControl.service.MealService;
+import ru.rotiza.Systems1221NutritionControl.service.meal.MealService;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,23 +42,45 @@ public class MealController {
     }
 
     @GetMapping("{mealId}")
-    public Meal getMeal(@PathVariable Long mealId) {
-        return mealService.getMeal(mealId);
+    public ResponseEntity<?> getMeal(@PathVariable Long mealId) {
+        Meal response;
+        try{
+            response = mealService.getMeal(mealId);
+        }catch (NotFoundException e){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(response);
     }
 
     @PostMapping
-    public Meal addMeal(@Valid @RequestBody NewMealRequestDTO meal) {
-        return mealService.addMeal(meal);
+    public ResponseEntity<?> addMeal(@Valid @RequestBody NewMealRequestDTO meal) {
+        Meal response = mealService.createMeal(meal);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PutMapping("{mealId}")
-    public Meal updateMeal(@Valid @RequestBody UpdateMealRequestDTO meal, @PathVariable Long mealId) {
-        return mealService.updateMeal(meal, mealId);
+    public ResponseEntity<?> updateMeal(@Valid @RequestBody UpdateMealRequestDTO meal, @PathVariable Long mealId) {
+        Meal response;
+        try{
+            response = mealService.updateMeal(meal, mealId);
+        }catch (NotFoundException e){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(response);
     }
 
     @DeleteMapping("{mealId}")
-    public void deleteMeal(@PathVariable Long mealId) {
-        mealService.deleteMeal(mealId);
+    public ResponseEntity<?> deleteMeal(@PathVariable Long mealId) {
+        try {
+            mealService.deleteMeal(mealId);
+        }catch (NotFoundException e){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok().build();
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
