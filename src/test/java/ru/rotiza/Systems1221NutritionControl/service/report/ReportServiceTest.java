@@ -47,7 +47,7 @@ class ReportServiceTest {
         Mockito.doReturn(currentUser).when(userRepo).findById(Mockito.anyLong());
         Mockito.doReturn(meals).when(mealRepo).findAllByDay(Mockito.any(), Mockito.any(), Mockito.any());
 
-        Boolean result = reportService.verifyBmiCompliance("2025-04-05", 1L);
+        Boolean result = reportService.verifyBmrCompliance("2025-04-05", 1L);
         assertTrue(result);
     }
 
@@ -70,7 +70,7 @@ class ReportServiceTest {
         Mockito.doReturn(currentUser).when(userRepo).findById(Mockito.anyLong());
         Mockito.doReturn(meals).when(mealRepo).findAllByDay(Mockito.any(), Mockito.any(), Mockito.any());
 
-        Boolean result = reportService.verifyBmiCompliance("2025-04-05", 1L);
+        Boolean result = reportService.verifyBmrCompliance("2025-04-05", 1L);
         assertFalse(result);
     }
 

@@ -40,12 +40,12 @@ public class ReportController {
                 .body(response);
     }
 
-    @GetMapping("bmi/{userId}")
-    public ResponseEntity<?> handleCheckBmi(@PathVariable Long userId, @RequestParam String date) {
+    @GetMapping("bmr/{userId}")
+    public ResponseEntity<?> handleCheckBmr(@PathVariable Long userId, @RequestParam String date) {
         Boolean response;
         try{
             validateDate(date);
-            response = reportService.verifyBmiCompliance(date, userId);
+            response = reportService.verifyBmrCompliance(date, userId);
         }catch (NotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .contentType(MediaType.APPLICATION_JSON)

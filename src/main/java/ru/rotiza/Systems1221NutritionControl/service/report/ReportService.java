@@ -27,7 +27,7 @@ public class ReportService {
         this.userRepo = userRepo;
     }
 
-    public Boolean verifyBmiCompliance(String date, Long userId) {
+    public Boolean verifyBmrCompliance(String date, Long userId) {
         User user = userRepo.findById(userId).orElseThrow(NotFoundException::new);
         LocalDateTime start = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd")).atStartOfDay();
         LocalDateTime end = start.plusDays(1);

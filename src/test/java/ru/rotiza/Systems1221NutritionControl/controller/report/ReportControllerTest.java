@@ -73,9 +73,9 @@ class ReportControllerTest {
     @Test
     void handleCheckBmi_ValidData_ReturnsValidResponseEntity() {
         Boolean result = true;
-        Mockito.doReturn(result).when(this.reportService).verifyBmiCompliance(Mockito.any(), Mockito.any());
+        Mockito.doReturn(result).when(this.reportService).verifyBmrCompliance(Mockito.any(), Mockito.any());
 
-        ResponseEntity<?> response = reportController.handleCheckBmi(1L, "2025-04-05");
+        ResponseEntity<?> response = reportController.handleCheckBmr(1L, "2025-04-05");
 
         assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -87,7 +87,7 @@ class ReportControllerTest {
     void handleCheckBmi_InvalidDateFormat_ReturnsValidResponseEntity() {
         String exceptionMessage = "Incorrect date format: date format should be yyyy-mm-dd";
 
-        ResponseEntity<?> response = reportController.handleCheckBmi(1L, "05-2025-04");
+        ResponseEntity<?> response = reportController.handleCheckBmr(1L, "05-2025-04");
 
         assertNotNull(response);
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
@@ -99,7 +99,7 @@ class ReportControllerTest {
     void handleCheckBmi_DateInFuture_ReturnsValidResponseEntity() {
         String exceptionMessage = "The date must not be future";
 
-        ResponseEntity<?> response = reportController.handleCheckBmi(1L, "2026-04-05");
+        ResponseEntity<?> response = reportController.handleCheckBmr(1L, "2026-04-05");
 
         assertNotNull(response);
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
@@ -110,9 +110,9 @@ class ReportControllerTest {
     @Test
     void handleCheckBmi_InvalidUserId_ReturnsValidResponseEntity() {
         String exceptionMessage = "Resource not found";
-        Mockito.doThrow(new NotFoundException(exceptionMessage)).when(reportService).verifyBmiCompliance(Mockito.any(), Mockito.any());
+        Mockito.doThrow(new NotFoundException(exceptionMessage)).when(reportService).verifyBmrCompliance(Mockito.any(), Mockito.any());
 
-        ResponseEntity<?> response = reportController.handleCheckBmi(1L, "2025-04-05");
+        ResponseEntity<?> response = reportController.handleCheckBmr(1L, "2025-04-05");
 
         assertNotNull(response);
         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
