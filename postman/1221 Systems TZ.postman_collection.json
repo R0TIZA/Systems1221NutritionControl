@@ -1,0 +1,4414 @@
+{
+	"info": {
+		"_postman_id": "a0d6c390-c30d-4296-b23b-601a079bfd9b",
+		"name": "1221 Systems TZ",
+		"description": "Run colection then db is empty.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39950959"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Creat",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Dmitry\",\r\n    \"gender\":\"MALE\",\r\n    \"email\":\"Dmitry1975@mail.ru\",\r\n    \"age\":50,\r\n    \"weight\":100,\r\n    \"height\":190,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Ann",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Nikita",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Nikita\",\r\n    \"gender\":\"MALE\",\r\n    \"email\":\"Nikita2005@mail.ru\",\r\n    \"age\":19,\r\n    \"weight\":55,\r\n    \"height\":165,\r\n    \"goal\":\"WEIGHT_GAIN\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Greg",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Greg\",\r\n    \"gender\":\"MALE\",\r\n    \"email\":\"Greg1981@mail.ru\",\r\n    \"age\":44,\r\n    \"weight\":80,\r\n    \"height\":170,\r\n    \"goal\":\"WEIGHT_MAINTENANCE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Victoria",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Victoria\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Victoria1982@mail.ru\",\r\n    \"age\":43,\r\n    \"weight\":60,\r\n    \"height\":169,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Without fields",
+									"item": [
+										{
+											"name": "Without name",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without gender",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without age",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without weight",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without height",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without goal",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Wrong data",
+									"item": [
+										{
+											"name": "Wrong email pattern",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001.mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Unsupported gender",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"GAY\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Older then the oldest men",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":118,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "User yaunger 16",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":15,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "User weight less then 20",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":19,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "User below the shortest person",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":64,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "User taller than the tallest person",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":273,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Unsupported goal",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_STOP\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/user",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Without body content",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Get all users",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get user by id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/user/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Get a non-existent user",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/user/10",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"10"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "//It is not necessary to fill in all the fields, the fields that do not need to be changed can be skipped\r\n{\r\n    \"name\":\"Dmitry\",\r\n    \"gender\":\"MALE\",\r\n    //Skipping the email\r\n    \"age\":50,\r\n    \"weight\":99,\r\n    \"height\":190,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Ann",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_MAINTENANCE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/2",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Nikita",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Nikita\",\r\n    \"gender\":\"MALE\",\r\n    \"email\":\"Nikita2005@mail.ru\",\r\n    \"age\":19,\r\n    \"weight\":58,\r\n    \"height\":165,\r\n    \"goal\":\"WEIGHT_GAIN\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Greg",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Greg\",\r\n    \"gender\":\"MALE\",\r\n    \"email\":\"Greg1981@mail.ru\",\r\n    \"age\":44,\r\n    \"weight\":80,\r\n    \"height\":171,\r\n    \"goal\":\"WEIGHT_MAINTENANCE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/4",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Victoria",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Victoria\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Victoria1982@mail.ru\",\r\n    \"age\":43,\r\n    \"weight\":57,\r\n    \"height\":169,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/5",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Wrong email pattern",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001.mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/2",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Unsupported gender",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"GAY\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Older then the oldest men",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":118,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "User yaunger 16",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":15,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "User weight less then 20",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":19,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "User below the shortest person",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":64,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "User taller than the tallest person",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"gender\":\"FEMALE\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":273,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Unsupported goal",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_STOP\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Editing non-existent user",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ann\",\r\n    \"gender\":\"FEMALE\",\r\n    \"email\":\"Ann2001@mail.ru\",\r\n    \"age\":23,\r\n    \"weight\":55,\r\n    \"height\":167,\r\n    \"goal\":\"WEIGHT_LOSS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/user/10",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"10"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Valid delete",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/user/5",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a non-existent user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/user/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dish",
+			"item": [
+				{
+					"name": "Create",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Borscht",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Pilau",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Pilau\",\r\n    \"calories\":376.75,\r\n    \"protein\":12.3,\r\n    \"fat\":21.9,\r\n    \"carbohydrate\":45.75\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Mashed potato",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Mashed potato\",\r\n    \"calories\":226.0,\r\n    \"protein\":3.72,\r\n    \"fat\":8.44,\r\n    \"carbohydrate\":33.62\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cutlet",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Cutlet\",\r\n    \"calories\":203.3,\r\n    \"protein\":18.5,\r\n    \"fat\":10.0,\r\n    \"carbohydrate\":11.7\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Ragout",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ragout\",\r\n    \"calories\":341.7,\r\n    \"protein\":22.5,\r\n    \"fat\":21.3,\r\n    \"carbohydrate\":15.3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Without fields",
+									"item": [
+										{
+											"name": "Without name",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without calories",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without protein",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without fat",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without carbohydrate",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Wrong data",
+									"item": [
+										{
+											"name": "Blank name",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative calories",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":-1,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative protein",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":-4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative fat",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":-6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative carbohydrate",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":-2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Without body content",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/dish",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Borscht",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Non-existent dish",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/10",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"10"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Borscht",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.4,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Pilau",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Pilau\",\r\n    \"calories\":376.7,\r\n    \"protein\":12.3,\r\n    \"fat\":21.9,\r\n    \"carbohydrate\":45.75\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/2",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Mashed potato",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Mashed potato\",\r\n    \"calories\":226.0,\r\n    \"protein\":3.7,\r\n    \"fat\":8.44,\r\n    \"carbohydrate\":33.62\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cutlet",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Cutlet\",\r\n    \"calories\":203.0,\r\n    \"protein\":18.5,\r\n    \"fat\":10.0,\r\n    \"carbohydrate\":11.7\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/4",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Ragout",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ragout\",\r\n    \"calories\":341.0,\r\n    \"protein\":22.5,\r\n    \"fat\":21.3,\r\n    \"carbohydrate\":15.3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/5",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Wrong data",
+									"item": [
+										{
+											"name": "Blank name",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative calories",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":-1,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative protein",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":-4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative fat",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":-6.4,\r\n    \"carbohydrate\":2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Negative carbohydrate",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\":\"Borscht\",\r\n    \"calories\":90.45,\r\n    \"protein\":4.3,\r\n    \"fat\":6.4,\r\n    \"carbohydrate\":-2.6\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/dish/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"dish",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Without body content",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/dish/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"dish",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Valid delete",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/dish/5",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"dish",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleting non-existent dish",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/dish/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"dish",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Meal",
+			"item": [
+				{
+					"name": "Create",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Add first meal to Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/meal",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add second meal to Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        1,\r\n        3,\r\n        4\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/meal",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add third meal to Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        2,\r\n        3,\r\n        4\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/meal",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Without fields",
+									"item": [
+										{
+											"name": "Without userId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"dishesId\":[\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Without dishesId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Wrong data",
+									"item": [
+										{
+											"name": "Wrong userId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":0,\r\n    \"dishesId\":[\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Empty dishesId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Wrong dishesId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 404\", function () {\r",
+															"    pm.response.to.have.status(404);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        0,\r\n        2,\r\n        3\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Without body data",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/meal",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read",
+					"item": [
+						{
+							"name": "Valid read",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/meal/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"meal",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reading non-existenet meal",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/meal/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"meal",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Add first meal to Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        2,\r\n        3,\r\n        4\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/meal/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add second meal to Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        3,\r\n        3,\r\n        4\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/meal/2",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add third meal to Dmitry",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        1,\r\n        3,\r\n        4\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/v1/meal/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Wrong data",
+									"item": [
+										{
+											"name": "Wrong userId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":0,\r\n    \"dishesId\":[\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Empty dishesId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Wrong dishesId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 404\", function () {\r",
+															"    pm.response.to.have.status(404);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"userId\":1,\r\n    \"dishesId\":[\r\n        0,\r\n        2,\r\n        3\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "localhost:8080/api/v1/meal/1",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"api",
+														"v1",
+														"meal",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Without body data",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/meal/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"meal",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Valid delete",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/meal/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"meal",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleting non-existent meal",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/meal/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"meal",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Daily",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Get daily report",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/daily/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"daily",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Wrong userId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function(){\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/daily/10",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"daily",
+												"10"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "BMI check",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Get bmi check",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/bmr/1?date=2025-04-05",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"bmr",
+												"1"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "2025-04-05"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Wrong userId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function(){\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/bmi/10?date=2025-04-05",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"bmi",
+												"10"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "2025-04-05"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Wrong date format",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function(){\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/bmr/10?date=05-04-2025",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"bmr",
+												"10"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "05-04-2025"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Date in future",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function(){\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/bmr/10?date=2026-04-05",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"bmr",
+												"10"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "2026-04-05"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "History",
+					"item": [
+						{
+							"name": "Valid",
+							"item": [
+								{
+									"name": "Get meal history",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/history/1?date=2025-04-03",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"history",
+												"1"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "2025-04-03"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Invalid",
+							"item": [
+								{
+									"name": "Wrong userId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/history/10?date=2025-04-03",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"history",
+												"10"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "2025-04-03"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Wrong date format",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/history/1?date=05-04-2025",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"history",
+												"1"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "05-04-2025"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Date in future",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/api/v1/report/history/1?date=2026-04-05",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"report",
+												"history",
+												"1"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "2026-04-05"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
